@@ -1,80 +1,100 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Teddys Musicombo</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:'Open Sans', sans-serif;
-background:#f5efe2;
-color:#2e2e2e;
+font-family:'Open Sans',sans-serif;
+background:#f4efe6;
+color:#2b2b2b;
 }
 
 header{
-background:#6b2e2e;
+background:#5a2b2b;
 color:white;
-text-align:center;
-padding:30px;
+padding:20px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-header h1{
-font-family:'Cinzel', serif;
-font-size:42px;
-margin:10px 0;
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1100px;
+margin:auto;
+}
+
+nav h1{
+font-family:'Cinzel',serif;
+font-size:26px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:600;
 }
 
 .hero{
-height:70vh;
+height:80vh;
 background:url("bandfoto.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
 }
 
 .hero-text{
 background:rgba(0,0,0,0.45);
-padding:25px 40px;
-font-size:32px;
-font-family:'Cinzel', serif;
+padding:30px;
+color:white;
+}
+
+.hero-text h2{
+font-family:'Cinzel',serif;
+font-size:50px;
+margin:0;
 }
 
 section{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:70px 20px;
 text-align:center;
 }
 
 h2{
-font-family:'Cinzel', serif;
-margin-bottom:25px;
+font-family:'Cinzel',serif;
+margin-bottom:30px;
+font-size:32px;
 }
 
-.instagram{
-display:flex;
-overflow-x:auto;
-gap:20px;
-padding:10px;
+.about{
+font-size:18px;
+line-height:1.6;
 }
 
-.instagram img{
-width:250px;
-border-radius:8px;
+.instagram-feed{
+margin-top:20px;
 }
 
 .social a{
 display:inline-block;
 margin:10px;
-padding:12px 22px;
-background:#6b2e2e;
+padding:12px 25px;
+background:#5a2b2b;
 color:white;
 text-decoration:none;
 border-radius:5px;
@@ -82,7 +102,18 @@ font-weight:bold;
 }
 
 .social a:hover{
-background:#8b3b3b;
+background:#7a3d3d;
+}
+
+.events{
+background:#efe6d8;
+border-radius:8px;
+padding:30px;
+}
+
+.event{
+margin:10px 0;
+font-size:18px;
 }
 
 .contact{
@@ -92,48 +123,105 @@ font-size:18px;
 footer{
 background:#333;
 color:white;
-text-align:center;
 padding:25px;
 }
 
+@media (max-width:700px){
+
+.hero-text h2{
+font-size:36px;
+}
+
+nav{
+flex-direction:column;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
+<nav>
+
 <h1>Teddys Musicombo</h1>
+
+<div>
+<a href="#about">Über uns</a>
+<a href="#events">Termine</a>
+<a href="#instagram">Instagram</a>
+<a href="#contact">Kontakt</a>
+</div>
+
+</nav>
+
 </header>
 
 <div class="hero">
+
 <div class="hero-text">
-Tanzlmusi mit Herz
-</div>
+<h2>Tanzlmusi mit Herz</h2>
 </div>
 
-<section>
+</div>
+
+<section id="about">
 
 <h2>Über uns</h2>
 
-<p>
-<strong>Teddys Musicombo</strong> – sechs Musikanten, ein Koffer voll Musik und ein Teddybär.
-Verwurzelt im Burgenland mit steirischem Einschlag ist unser Teddysound im
-Tanzlmusi-Stil unverkennbar. Das Repertoire reicht von böhmischen Schmankerln
-über alpenländische Klänge bis hin zu Oberkrainer und beliebten musikalischen
-Gustostückerln aus aller Welt.
+<p class="about">
+
+<strong>Teddys Musicombo</strong> – sechs Musikanten, ein Koffer voll Musik und ein Teddybär.  
+Verwurzelt im Burgenland mit steirischem Einschlag ist unser Teddysound im Tanzlmusi-Stil unverkennbar.  
+Das Repertoire reicht von böhmischen Schmankerln über alpenländische Klänge bis hin zu Oberkrainer  
+und beliebten musikalischen Gustostückerln aus aller Welt.
+
 </p>
 
 </section>
 
-<section>
+<section id="events">
 
-<h2>Einblicke</h2>
+<h2>Auftritte</h2>
 
-<div class="instagram">
-<img src="insta1.jpg">
-<img src="insta2.jpg">
-<img src="insta3.jpg">
-<img src="insta4.jpg">
+<div class="events">
+
+<div class="event">
+📅 12. Juli 2026 – Frühschoppen Musterort
+</div>
+
+<div class="event">
+📅 2. August 2026 – Dorffest Musterstadt
+</div>
+
+<div class="event">
+📅 20. September 2026 – Oktoberfest Beispiel
+</div>
+
+</div>
+
+</section>
+
+<section id="instagram">
+
+<h2>Instagram</h2>
+
+<div class="instagram-feed">
+
+<!-- Instagram Embed -->
+<iframe 
+src="https://snapwidget.com/embed/1030385" 
+class="snapwidget-widget" 
+allowtransparency="true" 
+frameborder="0" 
+scrolling="no" 
+style="border:none; overflow:hidden; width:100%; height:350px">
+</iframe>
+
 </div>
 
 </section>
@@ -152,12 +240,15 @@ Instagram
 
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
 
 <h2>Kontakt</h2>
 
 <p>
-Booking & Anfragen<br><br>
+
+Booking & Anfragen
+
+<br><br>
 
 📧  
 <a href="mailto:teddysmusicombo@gmail.com">
